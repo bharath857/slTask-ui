@@ -1,0 +1,11 @@
+Challenge
+Develop a SPA using Angular that consumes any real time data stream 
+(for examples see ***********************************, but you can use anything), 
+performs some aggregation of the data and displays the aggregate values on the page.
+
+We encourage using a state management library like ngrx. We ask that you prepare and 
+publish this work on GitHub, StackBlitz, or equivalent, viewable to us. Please do not include the name ********** in your project.
+
+An example application would be one that consumes the twitter data stream, filters by a user supplied hash
+ tag, and displays average 
+number of tweets per minute as well as a sample of the country code of origin.

@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-10">
+         <app-user-details></app-user-details>
+        <hr>
+        <ul class="list-group">
+            <a class="list-group-item" style="cursor: pointer" *ngFor="let user of (users | async).users; let i = index"
+                (click)="onEditItem(i)">
+                User Name:- <strong> {{ user.username }}</strong>    <br>
+                User Value:-  <strong>{{ user.userValue }} </strong>
+            </a>
+        </ul>
+    </div>
+</div>

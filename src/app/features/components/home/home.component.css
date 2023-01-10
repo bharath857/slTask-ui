@@ -1,0 +1,11 @@
+.navigate {
+    top: 30%;
+    position: absolute;
+    left: 20%;
+    display: inline-flex;
+}
+
+.btn {
+    margin: 1rem;
+    border-radius: 5px;
+}

@@ -1,0 +1,67 @@
+<div *ngIf="this.individulDetails">
+
+    <div class="info">
+        <div class="property">
+            <label for="name">Name : </label>
+            <label for="name">{{this.individulDetails?.name}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Created: </label>
+            <label for="name">{{this.individulDetails?.created | date}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Gender: </label>
+            <label for="name">{{this.individulDetails?.gender}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Hair color: </label>
+            <label for="name">{{this.individulDetails?.hair_color}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Height: </label>
+            <label for="name">{{this.individulDetails?.height}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Mass: </label>
+            <label for="name">{{this.individulDetails?.mass}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Skin Color: </label>
+            <label for="name">{{this.individulDetails?.skin_color}}</label>
+        </div>
+        <div class="property">
+            <a href="javascript:void(0)" (click)="getPlanetDetails(this.individulDetails.homeworld)"> Origin Planet</a>
+        </div>
+
+    </div>
+</div>
+
+<hr>
+<div class="planetInfo" *ngIf="planetInfoDetails">
+    <div class="info">
+        <div class="property">
+            <label for="name">Origin Planet Name : </label>
+            <label for="name">{{this.planetInfoDetails?.name}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Rotation Period: </label>
+            <label for="name">{{this.planetInfoDetails?.rotation_period }}</label>
+        </div>
+        <div class="property">
+            <label for="name">Orbital Period: </label>
+            <label for="name">{{this.planetInfoDetails?.orbital_period}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Diameter: </label>
+            <label for="name">{{this.planetInfoDetails?.diameter}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Gravity: </label>
+            <label for="name">{{this.planetInfoDetails?.gravity}}</label>
+        </div>
+        <div class="property">
+            <label for="name">Population: </label>
+            <label for="name">{{this.planetInfoDetails?.population}}</label>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+.sltask-custum-table-cell {
+    font-size: 15px;
+    padding: 0.2rem 0.3rem 0.2rem 0.5rem !important;
+    border: 1px solid #ede1e1;
+    min-width: 5rem;
+    max-width: 10rem;
+}
+
+.sltask-table-row {
+    height: 25px !important;
+}
+
+.sltask-table-header-row {
+    height: 25px !important;
+    background-color: rgb(206 206 211);
+    border: 1px solid #ede1e1;
+    padding-left: 0.5rem !important;
+}
+
+.sltask-table-stripped>tbody>tr:nth-child(even)>td,
+.sltask-table-stripped>tbody>tr:nth-child(odd)>th {
+    background-color: rgb(227 235 243);
+}

@@ -1,0 +1,14 @@
+<div class="cointainer" style="margin: 1rem;">
+    <br>
+    <h1 class="text-center"> Get Tweets from twitter by username</h1>
+
+    <br>
+<div class="user" style="margin-left: 5%; margin-right: 5%;">
+    <div class="form-group">
+        <input type="text" (keydown.enter)="getvalue($event.target.value)" class="form-control" placeholder="User Name">
+    </div>
+<br>
+    <ngx-twitter-timeline [data]="data" [opts]="{tweetLimit:20}"></ngx-twitter-timeline>
+</div>
+  
+</div>

@@ -1,0 +1,30 @@
+<div class="userinfo" style="margin: 5rem;">
+    <div class="row">
+        <div class="col-xs-12">
+            <form id="userDetailsForm" [formGroup]="userDetailsForm" (ngSubmit)="onSubmit()" >
+                <div class="row">
+                    <div class="col-sm-5 form-group" style="margin: .5rem;">
+                        <label for="name">User Name</label>
+                        <input type="text" id="username" class="form-control" name="username" formControlName="username"
+                            required>
+                    </div>
+                    <div class="col-sm-2 form-group" style="margin: .5rem;">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="userValue" class="form-control" name="userValue"
+                            formControlName="userValue" min="1" required pattern="^[1-9]+[0-9]*$">
+                    </div>
+                </div>
+
+                <div class="row" style="margin-top: 1.5rem;">
+                    <div class="col-xs-12">
+                        <button class="btn btn-success mx-2" type="submit" [disabled]="!userDetailsForm.valid">{{ edit ?
+                            'Update' : 'Add'
+                            }}</button>
+                        <button class="btn btn-danger mx-2" type="button" (click)="onDelete()" *ngIf="edit">Delete</button>
+                        <button class="btn btn-primary mx-2" type="button" (click)="onClear()">Clear</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="cointainer" style="margin: 1rem;">
+    <br>
+    <h1 class="text-center"> Search Tweets using Token</h1>
+
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <div class="search" style="margin-left: 5%; margin-right: 5%;">
+                <div class="form-group">
+                    <input type="text" (keydown.enter)="getRecentTweets({key:'query', value:$event.target.value})"
+                        class="form-control" placeholder="Search">
+                </div>
+                <br>
+
+                <div class="tweets" style="height: 100vh; overflow: auto;">
+
+                    <div class="tweet" *ngFor="let tweet of searchtweets" (click)="getTweetDetails(tweet.id)">
+                        {{ tweet.text }}
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="user" style="margin-left: 5%; margin-right: 5%;">
+                <br>
+                <div class="" *ngIf="userDetails">
+                    <strong>Name : </strong> {{ userDetails?.data.name}} <br>
+                    <strong>Username : </strong> {{ userDetails?.data.username}}
+
+                    <br>
+                    <strong>Following : </strong> {{ userDetails?.data.public_metrics.followers_count }}
+                    <br>
+                    <strong>Followers : </strong> {{ userDetails?.data.public_metrics.followers_count}}
+                    <br>
+                    <strong>No of tweets : </strong> {{ userDetails?.data.public_metrics.tweet_count}}
+                    <br>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
